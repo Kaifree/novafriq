@@ -1,0 +1,67 @@
+.poste-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.poste-item:hover {
+  border-color: var(--or);
+  transform: translateX(4px);
+}
+
+.poste-info { flex: 1; }
+
+.poste-titre {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--texte);
+  margin-bottom: 6px;
+}
+
+.poste-meta { display: flex; gap: 16px; }
+
+.poste-tag {
+  font-size: 12px;
+  color: var(--texte-sec);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.poste-tag svg {
+  width: 13px; height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.poste-arrow {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--gris-leger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.poste-item:hover .poste-arrow { background: var(--or); }
+
+.poste-arrow svg {
+  width: 16px; height: 16px;
+  stroke: var(--texte);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.poste-item:hover .poste-arrow svg { stroke: var(--noir); }
