@@ -163,14 +163,6 @@ export default function Vision() {
         </div>
       </section>
 
-      <section className="section section-light">
-        <div className="container">
-          <div className="section-label">Notre mission</div>
-          <h2 className="section-title">Bâtir l'écosystème technologique<br />de référence en Afrique.</h2>
-          <p className="section-intro">Notre mission est de concevoir, développer et déployer des solutions numériques qui répondent aux besoins réels du continent — et de former les talents qui les feront vivre. Nous avançons sur cinq fronts complémentaires : innovation, formation, logiciels, communication et technologies industrielles.</p>
-        </div>
-      </section>
-
       <section className="section section-gray">
         <div className="container">
           <div className="section-label">Nos engagements</div>
@@ -192,6 +184,14 @@ export default function Vision() {
 
       <section className="section section-light">
         <div className="container">
+          <div className="section-label">Notre mission</div>
+          <h2 className="section-title">Bâtir l'écosystème technologique<br />de référence en Afrique.</h2>
+          <p className="section-intro">Notre mission est de concevoir, développer et déployer des solutions numériques qui répondent aux besoins réels du continent — et de former les talents qui les feront vivre. Nous avançons sur cinq fronts complémentaires : innovation, formation, logiciels, communication et technologies industrielles.</p>
+        </div>
+      </section>
+
+      <section className="section section-gray">
+        <div className="container">
           <div className="section-label">Notre organisation</div>
           <h2 className="section-title">Cinq pôles stratégiques.</h2>
           <p className="section-intro">Chaque pôle porte une part de notre mission et avance selon son propre rythme, au service d'une même ambition.</p>
@@ -204,7 +204,7 @@ export default function Vision() {
         </div>
       </section>
 
-      <section className="section section-gray">
+      <section className="section section-light">
         <div className="container">
           <div className="section-label">Notre feuille de route</div>
           <h2 className="section-title">De 2026 à l'expansion<br />continentale.</h2>
