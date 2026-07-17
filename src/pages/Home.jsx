@@ -155,7 +155,7 @@ export default function Home() {
             <h2 className="section-title">Un groupe technologique<br />panafricain, né au Bénin.</h2>
             <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales — adaptés à leur contexte, pas simplement importés.</p>
             <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires — produits, formation, conseil et technologies industrielles — pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
-            <Link className="btn-secondary" to="/vision">Découvrir notre vision <ArrowRightIcon /></Link>
+            <Link className="btn-secondary on-light" to="/vision">Découvrir notre vision <ArrowRightIcon /></Link>
           </div>
         </div>
       </section>

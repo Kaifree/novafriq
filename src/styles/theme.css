@@ -148,6 +148,17 @@ body {
   color: var(--or);
 }
 
+/* Variante pour usage sur fond clair (section-light / section-gray) */
+.btn-secondary.on-light {
+  color: var(--texte);
+  border-color: var(--bordure);
+}
+
+.btn-secondary.on-light:hover {
+  border-color: var(--or);
+  color: var(--or);
+}
+
 /* Placeholder images (en attendant les vrais visuels) */
 .placeholder-img {
   width: 100%;
