@@ -9,6 +9,8 @@ const NAV_LINKS = [
   { to: '/equipe', label: 'Notre équipe' },
   { to: '/carrieres', label: 'Carrières' },
   { to: '/partenaires', label: 'Partenaires' },
+  { to: '/actualites', label: 'Actualités' },
+  { to: '/faq', label: 'FAQ' },
 ]
 
 export default function Header() {

@@ -9,6 +9,8 @@ import Equipe from './pages/Equipe'
 import Carrieres from './pages/Carrieres'
 import Partenaires from './pages/Partenaires'
 import Contact from './pages/Contact'
+import Faq from './pages/Faq'
+import Actualites from './pages/Actualites'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="equipe" element={<Equipe />} />
             <Route path="carrieres" element={<Carrieres />} />
             <Route path="partenaires" element={<Partenaires />} />
+            <Route path="faq" element={<Faq />} />
+            <Route path="actualites" element={<Actualites />} />
             <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>

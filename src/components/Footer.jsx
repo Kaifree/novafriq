@@ -50,6 +50,7 @@ export default function Footer() {
             <li><Link to="/fondateur">Le fondateur</Link></li>
             <li><Link to="/equipe">Notre équipe</Link></li>
             <li><Link to="/partenaires">Partenaires</Link></li>
+            <li><Link to="/actualites">Actualités</Link></li>
           </ul>
         </div>
 
@@ -66,6 +67,7 @@ export default function Footer() {
           <h4>Contact & RH</h4>
           <ul>
             <li><Link to="/contact">Nous écrire</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
             <li><Link to="/carrieres">Carrières</Link></li>
             <li><Link to="/partenaires">Partenariats</Link></li>
             <li><a href="mailto:direction@novafriq.africa">direction@novafriq.africa</a></li>
