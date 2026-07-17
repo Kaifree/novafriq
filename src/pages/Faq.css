@@ -50,6 +50,15 @@
   line-height: 1.75;
   padding-bottom: 22px;
   margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-item[open] p {
+  max-height: 300px;
+  opacity: 1;
 }
 
 .faq-cta {

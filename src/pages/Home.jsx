@@ -3,6 +3,7 @@ import { ArrowRightIcon, ExternalLinkIcon } from '../components/icons'
 import PlaceholderImg from '../components/PlaceholderImg'
 import StatCounter from '../components/StatCounter'
 import AfriqueIllustration from '../components/AfriqueIllustration'
+import Reveal from '../components/Reveal'
 import useInViewport from '../hooks/useInViewport'
 import './Home.css'
 
@@ -167,14 +168,14 @@ export default function Home() {
           <p className="section-intro">NovafriQ intervient là où le numérique peut transformer durablement la vie des Africains : le commerce, la finance, le savoir et les outils métier.</p>
 
           <div className="piliers-grid">
-            {PILIERS.map((p) => (
-              <div className="pilier-card" key={p.name}>
+            {PILIERS.map((p, i) => (
+              <Reveal className="pilier-card" index={i} key={p.name}>
                 <div className="pilier-icon">
                   <svg viewBox="0 0 24 24">{p.icon}</svg>
                 </div>
                 <div className="pilier-name">{p.name}</div>
                 <p className="pilier-desc">{p.desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -3,6 +3,7 @@ import PageHero from '../components/PageHero'
 import ProduitCard from '../components/ProduitCard'
 import PlaceholderImg from '../components/PlaceholderImg'
 import Timeline from '../components/Timeline'
+import Reveal from '../components/Reveal'
 import { ExternalLinkIcon } from '../components/icons'
 import './Produits.css'
 
@@ -126,6 +127,7 @@ export default function Produits() {
         <div className="container">
           <div className="produits-grid">
             <ProduitCard
+              index={0}
               href="https://gextimo.novafriq.africa"
               active
               bannerClassName="gextimo-bg"
@@ -139,6 +141,7 @@ export default function Produits() {
             />
 
             <ProduitCard
+              index={1}
               status="coming"
               statusLabel="À venir"
               banner={(
@@ -157,6 +160,7 @@ export default function Produits() {
             />
 
             <ProduitCard
+              index={2}
               status="coming"
               statusLabel="À venir"
               banner={(
@@ -217,14 +221,14 @@ export default function Produits() {
           <p className="section-intro">NovafriQ accompagne aussi les organisations qui veulent construire leurs propres solutions numériques.</p>
 
           <div className="valeurs-grid cols-3">
-            {SERVICES.map((s) => (
-              <div className="valeur-item" key={s.name}>
+            {SERVICES.map((s, i) => (
+              <Reveal className="valeur-item" index={i} key={s.name}>
                 <div className="valeur-icon">
                   <svg viewBox="0 0 24 24">{s.icon}</svg>
                 </div>
                 <div className="valeur-name">{s.name}</div>
                 <p className="valeur-desc">{s.desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -10,10 +10,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-#header.scrolled { border-bottom-color: rgba(37,99,235,0.25); }
+#header.scrolled {
+  border-bottom-color: rgba(37,99,235,0.25);
+  box-shadow: 0 4px 24px rgba(8,31,77,0.18);
+}
+
+#header.scrolled .logo-mark { transform: scale(0.9); }
 
 .logo-wrap {
   display: flex;
@@ -36,6 +41,7 @@
   color: var(--noir);
   letter-spacing: -0.5px;
   flex-shrink: 0;
+  transition: var(--transition);
 }
 
 .logo-text {

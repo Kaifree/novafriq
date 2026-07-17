@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero'
 import PlaceholderImg from '../components/PlaceholderImg'
 import PoleCard from '../components/PoleCard'
 import Timeline from '../components/Timeline'
+import Reveal from '../components/Reveal'
 import './Vision.css'
 
 const POLES = [
@@ -169,14 +170,14 @@ export default function Vision() {
           <h2 className="section-title">Ce en quoi nous croyons.</h2>
 
           <div className="valeurs-grid cols-3">
-            {ENGAGEMENTS.map((e) => (
-              <div className="valeur-item" key={e.name}>
+            {ENGAGEMENTS.map((e, i) => (
+              <Reveal className="valeur-item" index={i} key={e.name}>
                 <div className="valeur-icon">
                   <svg viewBox="0 0 24 24">{e.icon}</svg>
                 </div>
                 <div className="valeur-name">{e.name}</div>
                 <p className="valeur-desc">{e.desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

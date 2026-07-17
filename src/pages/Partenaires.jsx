@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
+import Reveal from '../components/Reveal'
 import { ArrowRightIcon } from '../components/icons'
 import './Partenaires.css'
 
@@ -18,10 +19,10 @@ export default function Partenaires() {
 
           <div className="partenaires-grid">
             {[1, 2, 3, 4].map((i) => (
-              <div className="partenaire-ph" key={i}>
+              <Reveal as="div" className="partenaire-ph" index={i - 1} key={i}>
                 <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
                 <span>Logo partenaire</span>
-              </div>
+              </Reveal>
             ))}
           </div>
 

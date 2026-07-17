@@ -45,8 +45,8 @@ export default function Equipe() {
           </div>
 
           <div className="equipe-grid">
-            {MEMBRES.map((m) => (
-              <MembreCard key={m.nom} {...m} />
+            {MEMBRES.map((m, i) => (
+              <MembreCard key={m.nom} index={i} {...m} />
             ))}
           </div>
 

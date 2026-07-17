@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import PlaceholderImg from '../components/PlaceholderImg'
+import Reveal from '../components/Reveal'
 import './Actualites.css'
 
 const CATEGORIES = [
@@ -28,15 +29,15 @@ export default function Actualites() {
       <section className="section section-light">
         <div className="container">
           <div className="actualites-grid">
-            {CATEGORIES.map((c) => (
-              <div className="actualite-card" key={c.name}>
+            {CATEGORIES.map((c, i) => (
+              <Reveal className="actualite-card" index={i} key={c.name}>
                 <PlaceholderImg variant="wide" label={c.name} />
                 <div className="actualite-body">
                   <span className="produit-status status-coming">Bientôt disponible</span>
                   <h3>{c.name}</h3>
                   <p>{c.desc}</p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 

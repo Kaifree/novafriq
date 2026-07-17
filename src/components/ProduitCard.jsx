@@ -1,12 +1,13 @@
+import Reveal from './Reveal'
 import { ExternalLinkIcon } from './icons'
 import './ProduitCard.css'
 
-export default function ProduitCard({ href, active, bannerClassName, banner, status, statusLabel, tagline, name, desc, linkLabel }) {
+export default function ProduitCard({ href, active, bannerClassName, banner, status, statusLabel, tagline, name, desc, linkLabel, index = 0 }) {
   const Tag = href ? 'a' : 'div'
   const tagProps = href ? { href, target: '_blank', rel: 'noreferrer' } : {}
 
   return (
-    <Tag className={`produit-card${active ? ' active-product' : ''}`} {...tagProps}>
+    <Reveal as={Tag} index={index} className={`produit-card${active ? ' active-product' : ''}`} {...tagProps}>
       <div className={`produit-banner${bannerClassName ? ` ${bannerClassName}` : ''}`}>
         <span className={`produit-status status-${status}`}>{statusLabel}</span>
         {banner}
@@ -24,6 +25,6 @@ export default function ProduitCard({ href, active, bannerClassName, banner, sta
           <span className="produit-link produit-link-disabled">{linkLabel}</span>
         )}
       </div>
-    </Tag>
+    </Reveal>
   )
 }
