@@ -1,0 +1,105 @@
+.timeline {
+  position: relative;
+}
+
+.timeline-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--or);
+  color: var(--blanc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 6px var(--blanc);
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--texte);
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--texte-sec);
+  line-height: 1.6;
+}
+
+/* Vertical (Notre méthode) */
+.timeline-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.timeline-vertical .timeline-rail {
+  position: absolute;
+  left: 21px;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: var(--bordure);
+}
+
+.timeline-vertical .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* Horizontal (Notre feuille de route) */
+.timeline-horizontal {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.timeline-horizontal .timeline-rail {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 22px;
+  height: 2px;
+  background: var(--bordure);
+}
+
+.timeline-horizontal .timeline-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .timeline-horizontal {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .timeline-horizontal .timeline-rail {
+    left: 21px;
+    right: auto;
+    top: 22px;
+    bottom: 22px;
+    width: 2px;
+    height: auto;
+  }
+
+  .timeline-horizontal .timeline-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+  }
+}

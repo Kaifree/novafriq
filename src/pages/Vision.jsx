@@ -1,6 +1,72 @@
 import PageHero from '../components/PageHero'
 import PlaceholderImg from '../components/PlaceholderImg'
+import PoleCard from '../components/PoleCard'
+import Timeline from '../components/Timeline'
 import './Vision.css'
+
+const POLES = [
+  {
+    name: 'Innovation',
+    color: 'var(--or)',
+    items: ['Produits SaaS', 'Intelligence artificielle', 'Applications', 'Plateformes'],
+    icon: (
+      <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.6c.6.5 1 1.3 1 2.4h6c0-1.1.4-1.9 1-2.4A7 7 0 0 0 12 2z" />
+    ),
+  },
+  {
+    name: 'Formation',
+    color: 'var(--emeraude)',
+    items: ['Bootcamps', 'Masterclass', 'Coaching'],
+    icon: (
+      <>
+        <path d="M22 10L12 5 2 10l10 5 10-5z" />
+        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+      </>
+    ),
+  },
+  {
+    name: 'Logiciels',
+    color: 'var(--dore)',
+    items: ['ERP', 'Applications métier', 'Développement web', 'Cybersécurité'],
+    icon: (
+      <>
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </>
+    ),
+  },
+  {
+    name: 'Communication',
+    color: 'var(--violet)',
+    items: ['Branding', 'Marketing digital', 'Community Management'],
+    icon: (
+      <>
+        <path d="M3 11l18-5v12L3 14v-3z" />
+        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+      </>
+    ),
+  },
+  {
+    name: 'Technologies industrielles',
+    color: 'var(--orange)',
+    items: ['Vision long terme', 'Équipements technologiques', 'Innovation industrielle'],
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </>
+    ),
+  },
+]
+
+const ROADMAP = [
+  { marker: '2026', title: 'Création de NovafriQ', desc: 'Naissance officielle du groupe à Sèmè-Podji, Bénin.' },
+  { marker: '2027', title: 'Lancement de Gextimo', desc: 'Ouverture publique de notre marketplace mode & artisanat.' },
+  { marker: '2028', title: 'Développement des services', desc: 'Élargissement de l\'offre : SaaS métier, IA, cybersécurité, conseil.' },
+  { marker: '2029', title: 'Centre de formation', desc: 'Ouverture d\'un centre dédié aux talents technologiques africains.' },
+  { marker: '2030', title: 'Expansion africaine', desc: 'Déploiement de nos solutions dans de nouveaux marchés du continent.' },
+  { marker: '2032+', title: 'Technologies industrielles', desc: 'Investissement dans l\'innovation et les équipements technologiques lourds.' },
+]
 
 const ENGAGEMENTS = [
   {
@@ -97,6 +163,14 @@ export default function Vision() {
         </div>
       </section>
 
+      <section className="section section-light">
+        <div className="container">
+          <div className="section-label">Notre mission</div>
+          <h2 className="section-title">Bâtir l'écosystème technologique<br />de référence en Afrique.</h2>
+          <p className="section-intro">Notre mission est de concevoir, développer et déployer des solutions numériques qui répondent aux besoins réels du continent — et de former les talents qui les feront vivre. Nous avançons sur cinq fronts complémentaires : innovation, formation, logiciels, communication et technologies industrielles.</p>
+        </div>
+      </section>
+
       <section className="section section-gray">
         <div className="container">
           <div className="section-label">Nos engagements</div>
@@ -113,6 +187,30 @@ export default function Vision() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section-light">
+        <div className="container">
+          <div className="section-label">Notre organisation</div>
+          <h2 className="section-title">Cinq pôles stratégiques.</h2>
+          <p className="section-intro">Chaque pôle porte une part de notre mission et avance selon son propre rythme, au service d'une même ambition.</p>
+
+          <div className="poles-grid">
+            {POLES.map((p, i) => (
+              <PoleCard key={p.name} index={i} {...p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-gray">
+        <div className="container">
+          <div className="section-label">Notre feuille de route</div>
+          <h2 className="section-title">De 2026 à l'expansion<br />continentale.</h2>
+          <p className="section-intro">Les grandes étapes qui jalonnent la construction du groupe.</p>
+
+          <Timeline orientation="horizontal" items={ROADMAP} />
         </div>
       </section>
     </div>

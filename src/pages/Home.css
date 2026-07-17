@@ -17,6 +17,24 @@
   background-size: 60px 60px;
 }
 
+@keyframes heroPulse {
+  from { opacity: 0.7; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.06); }
+}
+
+.hero-bg-pattern {
+  animation: heroPulse 11s ease-in-out infinite alternate;
+}
+
+.hero-illustration {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.9;
+}
+
 .hero-content {
   position: relative;
   max-width: 760px;
@@ -99,6 +117,17 @@
   text-transform: uppercase;
 }
 
+.qui-sommes-nous {
+  max-width: 680px;
+}
+
+.qui-sommes-nous p {
+  font-size: 16px;
+  color: var(--texte-sec);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
 .piliers-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -173,27 +202,6 @@
   color: var(--or-dark);
 }
 
-.produit-status {
-  font-size: 10px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.status-live {
-  background: rgba(22,163,74,0.12);
-  color: var(--emeraude);
-  border: 1px solid rgba(22,163,74,0.25);
-}
-
-.status-coming {
-  background: rgba(37,99,235,0.15);
-  color: var(--or);
-  border: 1px solid rgba(37,99,235,0.2);
-}
-
 .produit-apercu-desc {
   font-size: 16px;
   color: var(--texte-sec);
@@ -207,6 +215,10 @@
   color: var(--or-dark);
   margin-bottom: 28px;
   font-family: var(--font-display);
+}
+
+@media (max-width: 1200px) {
+  .hero-illustration { display: none; }
 }
 
 @media (max-width: 900px) {

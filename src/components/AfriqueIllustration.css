@@ -1,0 +1,47 @@
+.afrique-illu {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+}
+
+.afrique-shape {
+  fill: rgba(37,99,235,0.06);
+  stroke: rgba(37,99,235,0.25);
+  stroke-width: 1.5;
+}
+
+.afrique-link {
+  stroke: var(--or);
+  stroke-width: 1;
+  stroke-opacity: 0.35;
+  stroke-dasharray: 6 8;
+  animation: afriqueDash 3.5s linear infinite;
+}
+
+@keyframes afriqueDash {
+  to { stroke-dashoffset: -140; }
+}
+
+.afrique-node {
+  stroke: var(--blanc);
+  stroke-width: 1.5;
+}
+
+.afrique-pulse {
+  fill: none;
+  stroke-width: 1.5;
+  opacity: 0.6;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: afriquePulse 3s ease-in-out infinite;
+}
+
+@keyframes afriquePulse {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  70% { transform: scale(2.4); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 1200px) {
+  .afrique-illu { display: none; }
+}

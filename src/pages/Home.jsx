@@ -1,7 +1,73 @@
 import { Link } from 'react-router-dom'
 import { ArrowRightIcon, ExternalLinkIcon } from '../components/icons'
 import PlaceholderImg from '../components/PlaceholderImg'
+import StatCounter from '../components/StatCounter'
+import AfriqueIllustration from '../components/AfriqueIllustration'
+import useInViewport from '../hooks/useInViewport'
 import './Home.css'
+
+const POURQUOI = [
+  {
+    name: 'Expertise multidisciplinaire',
+    desc: "Développement, design, formation, communication et industrie réunis sous un même groupe pour porter vos projets de bout en bout.",
+    icon: (
+      <>
+        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+        <polyline points="2 17 12 22 22 17" />
+        <polyline points="2 12 12 17 22 12" />
+      </>
+    ),
+  },
+  {
+    name: 'Vision africaine',
+    desc: "Nous concevons pour les réalités du continent : connectivité, langues, usages et paiements locaux, pas des solutions importées telles quelles.",
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+      </>
+    ),
+  },
+  {
+    name: 'Innovation continue',
+    desc: "IA, automatisation, plateformes : nous investissons en continu dans les technologies qui donneront à nos clients une longueur d'avance.",
+    icon: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
+  },
+  {
+    name: 'Méthode agile',
+    desc: "Des cycles courts, une communication transparente et des livrables réguliers pour avancer vite sans sacrifier la qualité.",
+    icon: (
+      <>
+        <polyline points="23 4 23 10 17 10" />
+        <polyline points="1 20 1 14 7 14" />
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+      </>
+    ),
+  },
+  {
+    name: 'Équipe expérimentée',
+    desc: "Une équipe fondatrice pluridisciplinaire, engagée depuis le premier jour, qui grandit avec des profils rigoureusement sélectionnés.",
+    icon: (
+      <>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </>
+    ),
+  },
+  {
+    name: 'Accompagnement durable',
+    desc: "Notre relation ne s'arrête pas au déploiement : suivi, maintenance et évolution font partie de chaque engagement NovafriQ.",
+    icon: (
+      <>
+        <rect x="3" y="11" width="18" height="11" rx="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </>
+    ),
+  },
+]
 
 const PILIERS = [
   {
@@ -42,6 +108,8 @@ const PILIERS = [
 ]
 
 export default function Home() {
+  const { ref: pourquoiRef, inView: pourquoiInView } = useInViewport()
+
   return (
     <div id="page-home">
       <section className="hero">
@@ -66,15 +134,13 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="hero-illustration" aria-hidden="true">
+          <AfriqueIllustration />
+        </div>
+
         <div className="hero-stats">
-          <div className="hero-stat">
-            <span className="hero-stat-num">1</span>
-            <span className="hero-stat-label">Produit actif</span>
-          </div>
-          <div className="hero-stat">
-            <span className="hero-stat-num">4</span>
-            <span className="hero-stat-label">Piliers stratégiques</span>
-          </div>
+          <StatCounter value={1} label="Produit actif" />
+          <StatCounter value={4} label="Piliers stratégiques" />
           <div className="hero-stat">
             <span className="hero-stat-num">∞</span>
             <span className="hero-stat-label">Ambition africaine</span>
@@ -83,6 +149,18 @@ export default function Home() {
       </section>
 
       <section className="section section-light">
+        <div className="container">
+          <div className="qui-sommes-nous">
+            <div className="section-label">Qui sommes-nous ?</div>
+            <h2 className="section-title">Un groupe technologique<br />panafricain, né au Bénin.</h2>
+            <p>NovafriQ Groupe SAS conçoit, développe et déploie des plateformes numériques pensées pour les réalités africaines. Notre raison d'être : donner aux entrepreneurs, créateurs et professionnels du continent les mêmes outils que ceux dont disposent les meilleures entreprises mondiales — adaptés à leur contexte, pas simplement importés.</p>
+            <p>Fondé en 2024 à Sèmè-Podji, le groupe a démarré avec une conviction simple et s'est depuis structuré autour de plusieurs pôles complémentaires — produits, formation, conseil et technologies industrielles — pour bâtir, à terme, l'écosystème technologique de référence en Afrique.</p>
+            <Link className="btn-secondary" to="/vision">Découvrir notre vision <ArrowRightIcon /></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-gray">
         <div className="container">
           <div className="section-label">Nos domaines</div>
           <h2 className="section-title">Quatre piliers.<br />Un écosystème.</h2>
@@ -96,6 +174,30 @@ export default function Home() {
                 </div>
                 <div className="pilier-name">{p.name}</div>
                 <p className="pilier-desc">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-light">
+        <div className="container">
+          <div className="section-label">Pourquoi NovafriQ</div>
+          <h2 className="section-title">Pourquoi choisir<br />NovafriQ.</h2>
+          <p className="section-intro">Ce qui distingue notre approche des autres prestataires numériques du continent.</p>
+
+          <div className="valeurs-grid cols-3" ref={pourquoiRef}>
+            {POURQUOI.map((p, i) => (
+              <div
+                className={`valeur-item reveal${pourquoiInView ? ' in-view' : ''}`}
+                key={p.name}
+                style={{ animationDelay: `${i * 0.08}s` }}
+              >
+                <div className="valeur-icon">
+                  <svg viewBox="0 0 24 24">{p.icon}</svg>
+                </div>
+                <div className="valeur-name">{p.name}</div>
+                <p className="valeur-desc">{p.desc}</p>
               </div>
             ))}
           </div>

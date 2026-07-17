@@ -86,13 +86,6 @@
   margin-top: 4px;
 }
 
-.valeurs-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-
 @media (max-width: 900px) {
   .vision-layout { grid-template-columns: 1fr; gap: 40px; }
-  .valeurs-grid.cols-3 { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 600px) {
-  .valeurs-grid.cols-3 { grid-template-columns: 1fr; }
 }

@@ -9,6 +9,8 @@
   --or-dark: #1D4ED8;
   --emeraude: #16A34A;
   --dore: #D4AF37;
+  --violet: #7C3AED;
+  --orange: #F97316;
   --blanc: #FFFFFF;
   --gris-leger: #F5F7FA;
   --gris-moyen: #94A3B8;
@@ -187,6 +189,8 @@ body {
   margin-top: 40px;
 }
 
+.valeurs-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
 .valeur-item {
   background: var(--gris-leger);
   border-radius: 12px;
@@ -289,12 +293,41 @@ body {
 @media (max-width: 900px) {
   .section { padding: 64px 24px; }
   .valeurs-grid { grid-template-columns: 1fr 1fr; }
+  .valeurs-grid.cols-3 { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
   .valeurs-grid { grid-template-columns: 1fr; }
+  .valeurs-grid.cols-3 { grid-template-columns: 1fr; }
 }
+
+/* Statuts produit (badges "En ligne" / "À venir") — partagés par ProduitCard et les cartes Actualités */
+.produit-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-live {
+  background: rgba(22,163,74,0.12);
+  color: var(--emeraude);
+  border: 1px solid rgba(22,163,74,0.25);
+}
+
+.status-coming {
+  background: rgba(37,99,235,0.15);
+  color: var(--or);
+  border: 1px solid rgba(37,99,235,0.2);
+}
+
+/* Révélation au scroll — utilisée par Timeline, PoleCard, StatCounter, etc. */
+.reveal { opacity: 0; }
+.reveal.in-view { animation: fadeUp 0.7s cubic-bezier(0.4,0,0.2,1) both; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; }
 }
