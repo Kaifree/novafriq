@@ -32,15 +32,10 @@
   background: linear-gradient(135deg, #1A0A00 0%, #3D1F00 50%, #1A0A00 100%);
 }
 
-.produit-status {
+.produit-banner .produit-status {
   position: absolute;
-  top: 12px; right: 12px;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  top: 12px;
+  right: 12px;
 }
 
 .produit-logo-ph {
