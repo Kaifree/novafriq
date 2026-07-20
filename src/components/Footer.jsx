@@ -39,11 +39,9 @@ export default function Footer() {
           <h4>Le groupe</h4>
           <ul>
             <li><Link to="/vision">Notre vision</Link></li>
-            <li><Link to="/produits">Nos produits</Link></li>
             <li><Link to="/fondateur">Le fondateur</Link></li>
             <li><Link to="/equipe">Notre équipe</Link></li>
             <li><Link to="/partenaires">Partenaires</Link></li>
-            <li><Link to="/actualites">Actualités</Link></li>
           </ul>
         </div>
 
