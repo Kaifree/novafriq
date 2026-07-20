@@ -11,13 +11,18 @@
   box-shadow: 0 16px 48px rgba(0,0,0,0.10);
 }
 
-.membre-photo-wrap { position: relative; }
+.membre-photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 28px 20px 0;
+}
 
 .membre-photo-wrap .placeholder-img {
-  aspect-ratio: 3/4;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid var(--bordure);
+  width: 120px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  border: 1px solid var(--bordure);
 }
 
 .membre-badge {
