@@ -23,6 +23,12 @@
   text-decoration: none;
 }
 
+.footer-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
 .footer-brand p {
   font-size: 14px;
   color: rgba(255,255,255,0.4);

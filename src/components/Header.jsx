@@ -29,11 +29,7 @@ export default function Header() {
     <>
       <header id="header" className={scrolled ? 'scrolled' : ''}>
         <Link to="/" className="logo-wrap" onClick={closeMenu}>
-          <div className="logo-mark">N</div>
-          <div className="logo-text">
-            <span className="logo-name">NovafriQ</span>
-            <span className="logo-tagline">Groupe SAS</span>
-          </div>
+          <img src="/logo/novafriq-logo-blanc.png" alt="NovafriQ Groupe SAS" className="logo-img" />
         </Link>
 
         <nav id="main-nav">

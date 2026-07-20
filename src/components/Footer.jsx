@@ -10,11 +10,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
-            <div className="logo-mark">N</div>
-            <div className="logo-text">
-              <span className="logo-name">NovafriQ</span>
-              <span className="logo-tagline">Groupe SAS</span>
-            </div>
+            <img src="/logo/novafriq-logo-marine.png" alt="NovafriQ Groupe SAS" className="footer-logo-img" />
           </Link>
           <p>NovafriQ est un groupe technologique panafricain qui conçoit et déploie des plateformes numériques à fort impact pour l'Afrique.</p>
           {/* Réseaux sociaux retirés tant qu'aucun profil réel n'est configuré — à réintroduire avec les vraies URLs */}
