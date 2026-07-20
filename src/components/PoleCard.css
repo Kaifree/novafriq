@@ -43,7 +43,7 @@
 
 .pole-icon svg {
   width: 22px; height: 22px;
-  stroke: var(--blanc);
+  stroke: var(--bleu-profond);
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
@@ -87,7 +87,7 @@
 .pole-more {
   background: transparent;
   border: none;
-  color: var(--pole-color);
+  color: var(--bleu-profond);
   font-size: 13px;
   font-weight: 600;
   padding: 0;

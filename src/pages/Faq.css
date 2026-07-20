@@ -38,7 +38,7 @@
 .faq-chevron {
   width: 18px; height: 18px;
   flex-shrink: 0;
-  color: var(--or);
+  color: var(--bleu-profond);
   transition: transform 0.25s ease;
 }
 
