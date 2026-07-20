@@ -8,25 +8,25 @@ const MEMBRES = [
     nom: 'SAGBOHAN Aquilas',
     poste: 'Développeur Frontend',
     desc: "Interfaces, expérience utilisateur et intégration visuelle des produits NovafriQ.",
-    badge: 'Co-fondateur',
+    badge: 'Co-Associé',
   },
   {
     nom: 'KOUNOU A. Marcus Promide',
     poste: 'Développeur Backend',
     desc: 'Architecture serveur, bases de données et logique métier des solutions NovafriQ.',
-    badge: 'Co-fondateur',
+    badge: 'Co-Associé',
   },
   {
     nom: 'OGOUMA S. Tania Grazelia',
     poste: 'Community Manager',
     desc: 'Présence digitale, relation communauté et voix de NovafriQ sur les réseaux sociaux.',
-    badge: 'Co-fondatrice',
+    badge: 'Co-Associée',
   },
   {
     nom: 'ACCLOMBESSI Pedro',
     poste: 'Chef de Projet',
     desc: "Coordination des livrables, suivi des jalons et cohérence d'ensemble des projets du groupe.",
-    badge: 'Co-fondateur',
+    badge: 'Co-Associé',
   },
 ]
 
