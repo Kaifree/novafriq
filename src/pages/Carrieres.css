@@ -33,7 +33,7 @@
   background: linear-gradient(135deg, var(--noir) 0%, var(--gris-fonce) 100%);
   border-radius: 20px;
   padding: 48px;
-  border: 1px solid rgba(37,99,235,0.2);
+  border: 1px solid rgba(39,198,217,0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;

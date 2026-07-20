@@ -40,8 +40,8 @@
 
 .produit-logo-ph {
   width: 72px; height: 72px;
-  background: rgba(37,99,235,0.1);
-  border: 1px dashed rgba(37,99,235,0.3);
+  background: rgba(39,198,217,0.1);
+  border: 1px dashed rgba(39,198,217,0.3);
   border-radius: 14px;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
 
 .produit-logo-ph span {
   font-size: 9px;
-  color: rgba(37,99,235,0.5);
+  color: rgba(39,198,217,0.5);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }

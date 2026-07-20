@@ -27,7 +27,7 @@
 
 .pole-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 48px rgba(8,31,77,0.1);
+  box-shadow: 0 20px 48px rgba(1,14,79,0.1);
   border-color: var(--pole-color);
 }
 

@@ -5,7 +5,7 @@
   top: -100px;
   left: 16px;
   z-index: 2000;
-  background: var(--or);
+  background: var(--bleu-profond);
   color: var(--blanc);
   padding: 12px 20px;
   border-radius: 8px;
@@ -19,21 +19,23 @@
 }
 
 :root {
-  --noir: #081F4D;
-  --or: #2563EB;
-  --or-light: #3B82F6;
-  --or-dark: #1D4ED8;
-  --emeraude: #16A34A;
-  --dore: #D4AF37;
-  --violet: #7C3AED;
-  --orange: #F97316;
+  /* Palette officielle NovafriQ Groupe */
+  --bleu-profond: #010E4F;
+  --cyan: #27C6D9;
   --blanc: #FFFFFF;
-  --gris-leger: #F5F7FA;
+  --gris-clair: #F6F7FB;
+  --corps: #000000;
+
+  /* Alias legacy conservés pour éviter de retoucher chaque fichier consommateur : */
+  --noir: var(--bleu-profond);   /* chrome sombre : nav, footer, sections importantes */
+  --or: var(--cyan);              /* accent : icônes, liens actifs, bordures interactives */
+  --or-dark: var(--bleu-profond); /* accent texte foncé (wordmarks, citations) */
+  --texte: var(--bleu-profond);   /* titres */
+  --texte-sec: rgba(0,0,0,0.62);  /* texte de support, dérivé du noir officiel */
+  --gris-leger: var(--gris-clair);
   --gris-moyen: #94A3B8;
-  --gris-fonce: #1E293B;
-  --texte: #1E293B;
-  --texte-sec: #64748B;
-  --bordure: #E2E8F0;
+  --gris-fonce: #000833;
+  --bordure: #E1E5F0;
   --header-h: 72px;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -45,7 +47,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   background: var(--blanc);
-  color: var(--texte);
+  color: var(--corps);
   line-height: 1.7;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -73,7 +75,7 @@ body {
 .section-label {
   font-size: 11px;
   font-weight: 500;
-  color: var(--or);
+  color: var(--bleu-profond);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -87,7 +89,12 @@ body {
   display: block;
   width: 20px;
   height: 1px;
-  background: var(--or);
+  background: var(--cyan);
+}
+
+/* Sur fond sombre (section-dark), le texte cyan garde un excellent contraste */
+.section-label.light {
+  color: var(--cyan);
 }
 
 .section-title {
@@ -117,8 +124,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--or);
-  color: var(--noir);
+  background: var(--bleu-profond);
+  color: var(--blanc);
   font-size: 14px;
   font-weight: 600;
   padding: 14px 28px;
@@ -132,7 +139,8 @@ body {
 }
 
 .btn-primary:hover {
-  background: var(--or-light);
+  background: var(--cyan);
+  color: var(--bleu-profond);
   transform: translateY(-1px);
 }
 
@@ -153,26 +161,25 @@ body {
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
-  border: 1px solid rgba(37,99,235,0.3);
+  border: 1.5px solid var(--cyan);
   cursor: pointer;
   transition: var(--transition);
   font-family: var(--font-body);
 }
 
 .btn-secondary:hover {
-  border-color: var(--or);
-  color: var(--or);
+  background: var(--cyan);
+  color: var(--bleu-profond);
 }
 
 /* Variante pour usage sur fond clair (section-light / section-gray) */
 .btn-secondary.on-light {
-  color: var(--texte);
-  border-color: var(--bordure);
+  color: var(--bleu-profond);
 }
 
 .btn-secondary.on-light:hover {
-  border-color: var(--or);
-  color: var(--or);
+  background: var(--cyan);
+  color: var(--bleu-profond);
 }
 
 /* Placeholder images (en attendant les vrais visuels) */
@@ -227,7 +234,7 @@ body {
 
 .valeur-icon {
   width: 36px; height: 36px;
-  background: var(--or);
+  background: var(--cyan);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -237,7 +244,7 @@ body {
 
 .valeur-icon svg {
   width: 18px; height: 18px;
-  stroke: var(--noir);
+  stroke: var(--bleu-profond);
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
@@ -262,8 +269,8 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(37,99,235,0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.05) 0%, transparent 40%);
+    radial-gradient(circle at 20% 50%, rgba(39,198,217,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(39,198,217,0.05) 0%, transparent 40%);
 }
 
 .page-hero {
@@ -278,7 +285,7 @@ body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(39,198,217,0.3), transparent);
 }
 
 .page-hero .container { position: relative; z-index: 1; }
@@ -339,15 +346,15 @@ body {
 }
 
 .status-live {
-  background: rgba(22,163,74,0.12);
-  color: var(--emeraude);
-  border: 1px solid rgba(22,163,74,0.25);
+  background: rgba(39,198,217,0.15);
+  color: var(--bleu-profond);
+  border: 1px solid rgba(39,198,217,0.4);
 }
 
 .status-coming {
-  background: rgba(37,99,235,0.15);
-  color: var(--or);
-  border: 1px solid rgba(37,99,235,0.2);
+  background: rgba(1,14,79,0.06);
+  color: var(--bleu-profond);
+  border: 1px solid rgba(1,14,79,0.15);
 }
 
 /* Révélation au scroll — utilisée par Timeline, PoleCard, StatCounter, etc. */

@@ -119,6 +119,8 @@ export default function Home() {
   return (
     <div id="page-home">
       <section className="hero">
+        <div className="hero-halo hero-halo-cyan" aria-hidden="true"></div>
+        <div className="hero-halo hero-halo-bleu" aria-hidden="true"></div>
         <div className="hero-bg-pattern"></div>
         <div className="hero-grid-lines"></div>
         <div className="hero-content">
@@ -136,7 +138,7 @@ export default function Home() {
               Découvrir nos produits
               <ArrowRightIcon />
             </Link>
-            <Link className="btn-secondary" to="/vision">Notre vision</Link>
+            <Link className="btn-secondary on-light" to="/vision">Notre vision</Link>
           </div>
         </div>
 

@@ -2,18 +2,38 @@
   min-height: calc(100vh - var(--header-h));
   display: flex;
   align-items: center;
-  background: var(--noir);
+  background: linear-gradient(135deg, var(--blanc) 0%, var(--gris-clair) 45%, var(--blanc) 100%);
   position: relative;
   overflow: hidden;
   padding: 80px 48px;
+}
+
+.hero-halo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-halo-cyan {
+  width: 520px; height: 520px;
+  top: -160px; right: -120px;
+  background: radial-gradient(circle, rgba(39,198,217,0.35) 0%, rgba(39,198,217,0) 70%);
+}
+
+.hero-halo-bleu {
+  width: 620px; height: 620px;
+  bottom: -220px; left: -160px;
+  background: radial-gradient(circle, rgba(1,14,79,0.14) 0%, rgba(1,14,79,0) 70%);
 }
 
 .hero-grid-lines {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(1,14,79,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1,14,79,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 

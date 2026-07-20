@@ -1,6 +1,6 @@
 #footer {
   background: var(--noir);
-  border-top: 1px solid rgba(37,99,235,0.15);
+  border-top: 1px solid rgba(39,198,217,0.15);
   padding: 64px 48px 32px;
 }
 
@@ -50,8 +50,8 @@
 }
 
 .social-btn:hover {
-  background: rgba(37,99,235,0.1);
-  border-color: rgba(37,99,235,0.3);
+  background: rgba(39,198,217,0.1);
+  border-color: rgba(39,198,217,0.3);
 }
 
 .social-btn svg {
@@ -118,7 +118,7 @@
 }
 
 .newsletter-soon:hover {
-  border-color: rgba(37,99,235,0.3);
+  border-color: rgba(39,198,217,0.3);
   color: rgba(255,255,255,0.6);
 }
 

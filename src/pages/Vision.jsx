@@ -17,7 +17,7 @@ const POLES = [
   },
   {
     name: 'Formation',
-    color: 'var(--emeraude)',
+    color: 'var(--or)',
     items: ['Bootcamps', 'Masterclass', 'Coaching'],
     icon: (
       <>
@@ -28,7 +28,7 @@ const POLES = [
   },
   {
     name: 'Logiciels',
-    color: 'var(--dore)',
+    color: 'var(--or)',
     items: ['ERP', 'Applications métier', 'Développement web', 'Cybersécurité'],
     icon: (
       <>
@@ -39,7 +39,7 @@ const POLES = [
   },
   {
     name: 'Communication',
-    color: 'var(--violet)',
+    color: 'var(--or)',
     items: ['Branding', 'Marketing digital', 'Community Management'],
     icon: (
       <>
@@ -50,7 +50,7 @@ const POLES = [
   },
   {
     name: 'Technologies industrielles',
-    color: 'var(--orange)',
+    color: 'var(--or)',
     items: ['Vision long terme', 'Équipements technologiques', 'Innovation industrielle'],
     icon: (
       <>

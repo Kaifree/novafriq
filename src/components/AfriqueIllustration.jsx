@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react'
 import './AfriqueIllustration.css'
 
 const NODES = [
-  { x: 210, y: 90, color: 'var(--dore)' },
+  { x: 210, y: 90, color: 'var(--or)' },
   { x: 300, y: 140, color: 'var(--or)' },
   { x: 340, y: 230, color: 'var(--or)' },
-  { x: 260, y: 260, color: 'var(--emeraude)' },
+  { x: 260, y: 260, color: 'var(--or)' },
   { x: 180, y: 220, color: 'var(--or)' },
-  { x: 150, y: 320, color: 'var(--dore)' },
-  { x: 240, y: 360, color: 'var(--emeraude)' },
+  { x: 150, y: 320, color: 'var(--or)' },
+  { x: 240, y: 360, color: 'var(--or)' },
   { x: 320, y: 340, color: 'var(--or)' },
 ]
 
