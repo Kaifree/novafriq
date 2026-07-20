@@ -67,8 +67,8 @@
   align-items: center;
   gap: 8px;
   font-size: 11px;
-  font-weight: 500;
-  color: var(--or);
+  font-weight: 600;
+  color: var(--bleu-profond);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 28px;
@@ -79,14 +79,14 @@
   display: block;
   width: 24px;
   height: 1px;
-  background: var(--or);
+  background: var(--cyan);
 }
 
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(42px, 5vw, 72px);
   font-weight: 700;
-  color: var(--blanc);
+  color: var(--bleu-profond);
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 28px;
@@ -94,12 +94,12 @@
 
 .hero-title em {
   font-style: normal;
-  color: var(--or);
+  color: var(--cyan);
 }
 
 .hero-subtitle {
   font-size: 18px;
-  color: rgba(255,255,255,0.6);
+  color: var(--texte-sec);
   max-width: 520px;
   line-height: 1.7;
   margin-bottom: 48px;
