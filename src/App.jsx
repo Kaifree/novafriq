@@ -11,6 +11,7 @@ import Partenaires from './pages/Partenaires'
 import Contact from './pages/Contact'
 import Faq from './pages/Faq'
 import Actualites from './pages/Actualites'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="faq" element={<Faq />} />
             <Route path="actualites" element={<Actualites />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

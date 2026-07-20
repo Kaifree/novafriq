@@ -13,7 +13,7 @@ export default function PoleCard({ name, color, icon, items, index = 0 }) {
       style={{ '--pole-color': color, animationDelay: `${index * 0.1}s` }}
     >
       <div className="pole-icon">
-        <svg viewBox="0 0 24 24">{icon}</svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true">{icon}</svg>
       </div>
       <div className="pole-name">{name}</div>
       <ul className="pole-items">

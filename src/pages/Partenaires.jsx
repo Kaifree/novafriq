@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import { ArrowRightIcon } from '../components/icons'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Partenaires.css'
 
 export default function Partenaires() {
+  useDocumentMeta(
+    'Partenaires & Investisseurs — NovafriQ Groupe SAS',
+    'NovafriQ est ouvert à des partenariats stratégiques, des co-investissements et des collaborations à fort impact sur le continent africain.'
+  )
   return (
     <div id="page-partenaires">
       <PageHero crumb="Partenaires & Investisseurs" title={<>Construisons ensemble<br />quelque chose de grand.</>}>
@@ -20,7 +25,7 @@ export default function Partenaires() {
           <div className="partenaires-grid">
             {[1, 2, 3, 4].map((i) => (
               <Reveal as="div" className="partenaire-ph" index={i - 1} key={i}>
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
                 <span>Logo partenaire</span>
               </Reveal>
             ))}

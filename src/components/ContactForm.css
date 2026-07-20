@@ -55,6 +55,18 @@
 
 .contact-submit { width: 100%; justify-content: center; }
 
+.contact-form-fallback {
+  margin-top: 16px;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+}
+
+.contact-form-fallback a {
+  color: var(--or);
+  font-weight: 500;
+}
+
 @media (max-width: 900px) {
   .form-row { grid-template-columns: 1fr; }
 }

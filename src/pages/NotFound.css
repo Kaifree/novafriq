@@ -1,0 +1,30 @@
+#page-not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 24px;
+}
+
+.not-found-content {
+  text-align: center;
+}
+
+.not-found-code {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12vw, 120px);
+  font-weight: 700;
+  color: var(--or);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.not-found-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 12px;
+}
+
+.not-found-content p {
+  color: var(--texte-sec);
+  margin-bottom: 32px;
+}

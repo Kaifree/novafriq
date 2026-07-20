@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero'
 import MembreCard from '../components/MembreCard'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Equipe.css'
 
 const MEMBRES = [
@@ -30,6 +31,10 @@ const MEMBRES = [
 ]
 
 export default function Equipe() {
+  useDocumentMeta(
+    'Notre Équipe — NovafriQ Groupe SAS',
+    "Découvrez l'équipe fondatrice de NovafriQ Groupe SAS, à l'origine du groupe technologique panafricain."
+  )
   return (
     <div id="page-equipe">
       <PageHero crumb="Notre équipe" title={<>Les personnes qui<br />bâtissent NovafriQ.</>}>

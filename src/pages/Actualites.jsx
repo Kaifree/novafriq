@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import PlaceholderImg from '../components/PlaceholderImg'
 import Reveal from '../components/Reveal'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Actualites.css'
 
 const CATEGORIES = [
@@ -20,6 +21,10 @@ const CATEGORIES = [
 ]
 
 export default function Actualites() {
+  useDocumentMeta(
+    'Actualités — NovafriQ Groupe SAS',
+    'Les actualités du groupe NovafriQ : nouveautés produits, vie du groupe et tribunes sur la tech africaine.'
+  )
   return (
     <div id="page-actualites">
       <PageHero crumb="Actualités" title="Les actualités NovafriQ.">

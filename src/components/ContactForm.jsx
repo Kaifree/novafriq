@@ -5,15 +5,26 @@ import './ContactForm.css'
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/VOTRE_ID_FORMSPREE'
 
 const EMPTY_FORM = { prenom: '', nom: '', email: '', objet: '', message: '' }
+const FALLBACK_EMAIL = 'direction@novafriq.africa'
+
+function fallbackMailto(form) {
+  const subject = encodeURIComponent(`NovafriQ — ${form.objet || 'Nouveau message'}`)
+  const body = encodeURIComponent(
+    `Nom : ${form.prenom} ${form.nom}\nEmail : ${form.email}\n\n${form.message}`
+  )
+  return `mailto:${FALLBACK_EMAIL}?subject=${subject}&body=${body}`
+}
 
 export default function ContactForm() {
   const showToast = useToast()
   const [form, setForm] = useState(EMPTY_FORM)
   const [sending, setSending] = useState(false)
+  const [failed, setFailed] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm((f) => ({ ...f, [name]: value }))
+    setFailed(false)
   }
 
   const handleSubmit = async (e) => {
@@ -30,11 +41,14 @@ export default function ContactForm() {
       if (response.ok) {
         showToast('Message envoyé — nous vous répondrons sous 48h.')
         setForm(EMPTY_FORM)
+        setFailed(false)
       } else {
-        showToast("Échec de l'envoi. Réessayez ou écrivez-nous directement par email.")
+        showToast("Échec de l'envoi. Utilisez le lien ci-dessous pour nous écrire directement.")
+        setFailed(true)
       }
     } catch {
-      showToast('Erreur réseau — vérifiez votre connexion et réessayez.')
+      showToast('Erreur réseau — utilisez le lien ci-dessous pour nous écrire directement.')
+      setFailed(true)
     } finally {
       setSending(false)
     }
@@ -80,11 +94,17 @@ export default function ContactForm() {
 
       <button className="btn-primary contact-submit" type="submit" disabled={sending}>
         <span>{sending ? 'Envoi en cours...' : 'Envoyer le message'}</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <line x1="22" y1="2" x2="11" y2="13" />
           <polygon points="22 2 15 22 11 13 2 9 22 2" />
         </svg>
       </button>
+
+      {failed && (
+        <p className="contact-form-fallback">
+          L'envoi a échoué. <a href={fallbackMailto(form)}>Écrivez-nous directement à {FALLBACK_EMAIL}</a>
+        </p>
+      )}
     </form>
   )
 }

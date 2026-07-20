@@ -86,36 +86,6 @@
   font-weight: 400;
 }
 
-.contact-detail-socials {
-  display: flex;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.contact-social-btn {
-  width: 34px; height: 34px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.contact-social-btn svg {
-  width: 15px; height: 15px;
-  fill: rgba(255,255,255,0.6);
-}
-
-.contact-social-btn:hover {
-  border-color: var(--or);
-  background: rgba(37,99,235,0.1);
-}
-
-.contact-social-btn:hover svg { fill: var(--or); }
-
 .contact-map {
   margin-top: 56px;
   border-radius: 20px;

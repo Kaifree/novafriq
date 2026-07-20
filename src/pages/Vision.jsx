@@ -3,6 +3,7 @@ import PlaceholderImg from '../components/PlaceholderImg'
 import PoleCard from '../components/PoleCard'
 import Timeline from '../components/Timeline'
 import Reveal from '../components/Reveal'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Vision.css'
 
 const POLES = [
@@ -61,12 +62,12 @@ const POLES = [
 ]
 
 const ROADMAP = [
-  { marker: '2026', title: 'Création de NovafriQ', desc: 'Naissance officielle du groupe à Sèmè-Podji, Bénin.' },
-  { marker: '2027', title: 'Lancement de Gextimo', desc: 'Ouverture publique de notre marketplace mode & artisanat.' },
-  { marker: '2028', title: 'Développement des services', desc: 'Élargissement de l\'offre : SaaS métier, IA, cybersécurité, conseil.' },
-  { marker: '2029', title: 'Centre de formation', desc: 'Ouverture d\'un centre dédié aux talents technologiques africains.' },
-  { marker: '2030', title: 'Expansion africaine', desc: 'Déploiement de nos solutions dans de nouveaux marchés du continent.' },
-  { marker: '2032+', title: 'Technologies industrielles', desc: 'Investissement dans l\'innovation et les équipements technologiques lourds.' },
+  { marker: '2024', title: 'Création de NovafriQ', desc: 'Naissance officielle du groupe à Sèmè-Podji, Bénin.' },
+  { marker: '2025', title: 'Lancement de Gextimo', desc: 'Ouverture publique de notre marketplace mode & artisanat.' },
+  { marker: '2026', title: 'Développement des services', desc: 'Élargissement de l\'offre : SaaS métier, IA, cybersécurité, conseil.' },
+  { marker: '2027', title: 'Centre de formation', desc: 'Ouverture d\'un centre dédié aux talents technologiques africains.' },
+  { marker: '2028', title: 'Expansion africaine', desc: 'Déploiement de nos solutions dans de nouveaux marchés du continent.' },
+  { marker: '2030+', title: 'Technologies industrielles', desc: 'Investissement dans l\'innovation et les équipements technologiques lourds.' },
 ]
 
 const ENGAGEMENTS = [
@@ -128,6 +129,10 @@ const ENGAGEMENTS = [
 ]
 
 export default function Vision() {
+  useDocumentMeta(
+    'Notre Vision — NovafriQ Groupe SAS',
+    "Une conviction profonde : l'Afrique n'a pas besoin de copier, elle a besoin d'outils conçus pour elle, par elle. Découvrez la vision, la mission et les engagements de NovafriQ."
+  )
   return (
     <div id="page-vision">
       <PageHero crumb="Notre Vision" title="Pourquoi NovafriQ existe.">
@@ -173,7 +178,7 @@ export default function Vision() {
             {ENGAGEMENTS.map((e, i) => (
               <Reveal className="valeur-item" index={i} key={e.name}>
                 <div className="valeur-icon">
-                  <svg viewBox="0 0 24 24">{e.icon}</svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">{e.icon}</svg>
                 </div>
                 <div className="valeur-name">{e.name}</div>
                 <p className="valeur-desc">{e.desc}</p>

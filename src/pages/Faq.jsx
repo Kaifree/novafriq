@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Faq.css'
 
 const FAQS = [
@@ -42,6 +43,10 @@ const FAQS = [
 ]
 
 export default function Faq() {
+  useDocumentMeta(
+    'FAQ — NovafriQ Groupe SAS',
+    'Toutes les réponses à vos questions sur NovafriQ, ses produits et sa façon de travailler.'
+  )
   return (
     <div id="page-faq">
       <PageHero crumb="FAQ" title="Vos questions, nos réponses.">
@@ -55,7 +60,7 @@ export default function Faq() {
               <details className="faq-item" name="faq" key={item.q}>
                 <summary>
                   <span>{item.q}</span>
-                  <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </summary>

@@ -2,8 +2,16 @@ import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import PosteItem from '../components/PosteItem'
 import { ArrowRightIcon } from '../components/icons'
-import { useToast } from '../components/ToastContext'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Carrieres.css'
+
+const CANDIDATURE_EMAIL = 'direction@novafriq.africa'
+
+function candidatureMailto(titre) {
+  const subject = encodeURIComponent(`Candidature — ${titre}`)
+  const body = encodeURIComponent(`Bonjour,\n\nJe souhaite postuler au poste de ${titre}.\n\nMerci de trouver mon CV et ma motivation ci-joint.\n`)
+  return `mailto:${CANDIDATURE_EMAIL}?subject=${subject}&body=${body}`
+}
 
 const POSTES = [
   { titre: 'Développeur Frontend React', lieu: 'Sèmè-Podji / Télétravail', type: 'Temps plein' },
@@ -13,7 +21,10 @@ const POSTES = [
 ]
 
 export default function Carrieres() {
-  const showToast = useToast()
+  useDocumentMeta(
+    'Carrières — NovafriQ Groupe SAS',
+    'Rejoignez l’équipe NovafriQ : découvrez nos postes ouverts et envoyez votre candidature spontanée.'
+  )
 
   return (
     <div id="page-carrieres">
@@ -41,7 +52,7 @@ export default function Carrieres() {
                 titre={p.titre}
                 lieu={p.lieu}
                 type={p.type}
-                onClick={() => showToast('Candidature en cours de traitement...')}
+                onClick={() => { window.location.href = candidatureMailto(p.titre) }}
               />
             ))}
           </div>

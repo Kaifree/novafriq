@@ -5,6 +5,7 @@ import PlaceholderImg from '../components/PlaceholderImg'
 import Timeline from '../components/Timeline'
 import Reveal from '../components/Reveal'
 import { ExternalLinkIcon } from '../components/icons'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Produits.css'
 
 const GEXTIMO_FEATURES = [
@@ -117,6 +118,10 @@ const METHODE = [
 ]
 
 export default function Produits() {
+  useDocumentMeta(
+    'Nos Produits — NovafriQ Groupe SAS',
+    "Gextimo, la marketplace panafricaine dédiée aux créateurs de mode, et l'ensemble des services numériques (développement, IA, cybersécurité, conseil) proposés par NovafriQ."
+  )
   return (
     <div id="page-produits">
       <PageHero crumb="Nos Produits" title={<>Notre portefeuille<br />de produits.</>}>
@@ -146,7 +151,7 @@ export default function Produits() {
               statusLabel="À venir"
               banner={(
                 <div className="produit-logo-ph">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(37,99,235,0.4)" strokeWidth="1.5">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(37,99,235,0.4)" strokeWidth="1.5" aria-hidden="true">
                     <rect x="3" y="3" width="18" height="18" rx="2" />
                     <path d="M12 8v8M8 12h8" />
                   </svg>
@@ -165,7 +170,7 @@ export default function Produits() {
               statusLabel="À venir"
               banner={(
                 <div className="produit-logo-ph">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(37,99,235,0.4)" strokeWidth="1.5">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(37,99,235,0.4)" strokeWidth="1.5" aria-hidden="true">
                     <rect x="3" y="3" width="18" height="18" rx="2" />
                     <path d="M12 8v8M8 12h8" />
                   </svg>
@@ -224,7 +229,7 @@ export default function Produits() {
             {SERVICES.map((s, i) => (
               <Reveal className="valeur-item" index={i} key={s.name}>
                 <div className="valeur-icon">
-                  <svg viewBox="0 0 24 24">{s.icon}</svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">{s.icon}</svg>
                 </div>
                 <div className="valeur-name">{s.name}</div>
                 <p className="valeur-desc">{s.desc}</p>

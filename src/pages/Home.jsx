@@ -5,6 +5,7 @@ import StatCounter from '../components/StatCounter'
 import AfriqueIllustration from '../components/AfriqueIllustration'
 import Reveal from '../components/Reveal'
 import useInViewport from '../hooks/useInViewport'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 import './Home.css'
 
 const POURQUOI = [
@@ -109,6 +110,10 @@ const PILIERS = [
 ]
 
 export default function Home() {
+  useDocumentMeta(
+    "NovafriQ Groupe SAS — Construire l'Afrique numérique",
+    "NovafriQ Groupe SAS est un groupe technologique panafricain qui conçoit, développe et déploie des plateformes numériques à fort impact pour les entrepreneurs, créateurs et professionnels africains."
+  )
   const { ref: pourquoiRef, inView: pourquoiInView } = useInViewport()
 
   return (
@@ -171,7 +176,7 @@ export default function Home() {
             {PILIERS.map((p, i) => (
               <Reveal className="pilier-card" index={i} key={p.name}>
                 <div className="pilier-icon">
-                  <svg viewBox="0 0 24 24">{p.icon}</svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">{p.icon}</svg>
                 </div>
                 <div className="pilier-name">{p.name}</div>
                 <p className="pilier-desc">{p.desc}</p>
@@ -195,7 +200,7 @@ export default function Home() {
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <div className="valeur-icon">
-                  <svg viewBox="0 0 24 24">{p.icon}</svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">{p.icon}</svg>
                 </div>
                 <div className="valeur-name">{p.name}</div>
                 <p className="valeur-desc">{p.desc}</p>
