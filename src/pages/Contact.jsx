@@ -61,7 +61,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-detail-text">
                     <div className="contact-detail-label">Téléphone</div>
-                    <div className="contact-detail-value">+229 00 00 00 00</div>
+                    <div className="contact-detail-value">+229 01 91 47 96 28</div>
                   </div>
                 </div>
               </div>
