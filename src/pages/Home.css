@@ -171,7 +171,7 @@
 
 .piliers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 24px;
 }
 
@@ -260,6 +260,10 @@
 
 @media (max-width: 1200px) {
   .hero-illustration { display: none; }
+}
+
+@media (max-width: 1100px) {
+  .piliers-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 900px) {
