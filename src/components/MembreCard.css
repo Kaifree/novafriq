@@ -18,11 +18,17 @@
   padding: 28px 20px 0;
 }
 
-.membre-photo-wrap .placeholder-img {
+.membre-photo-wrap .placeholder-img,
+.membre-photo {
   width: 120px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid var(--bordure);
+}
+
+.membre-photo {
+  object-fit: cover;
+  object-position: center 20%;
 }
 
 .membre-badge {

@@ -3,11 +3,15 @@ import PlaceholderImg from './PlaceholderImg'
 import { PersonIcon } from './icons'
 import './MembreCard.css'
 
-export default function MembreCard({ nom, poste, desc, badge, index = 0 }) {
+export default function MembreCard({ nom, poste, desc, badge, photo, index = 0 }) {
   return (
     <Reveal index={index} className="membre-card">
       <div className="membre-photo-wrap">
-        <PlaceholderImg icon={<PersonIcon />} label="Photo à venir" dim="Portrait — 600 × 800 px" />
+        {photo ? (
+          <img src={photo} alt={nom} className="membre-photo" />
+        ) : (
+          <PlaceholderImg icon={<PersonIcon />} label="Photo à venir" dim="Portrait, 600 × 800 px" />
+        )}
         <div className="membre-badge">{badge}</div>
       </div>
       <div className="membre-info">

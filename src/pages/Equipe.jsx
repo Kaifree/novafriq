@@ -9,12 +9,14 @@ const MEMBRES = [
     poste: 'Développeur Frontend',
     desc: "Interfaces, expérience utilisateur et intégration visuelle des produits NovafriQ.",
     badge: 'Co-Associé',
+    photo: '/team/associe-1.png',
   },
   {
     nom: 'KOUNOU A. Marcus Promide',
     poste: 'Développeur Backend',
     desc: 'Architecture serveur, bases de données et logique métier des solutions NovafriQ.',
     badge: 'Co-Associé',
+    photo: '/team/associe-2.jpg',
   },
   {
     nom: 'OGOUMA S. Tania Grazelia',
@@ -27,6 +29,7 @@ const MEMBRES = [
     poste: 'Chef de Projet',
     desc: "Coordination des livrables, suivi des jalons et cohérence d'ensemble des projets du groupe.",
     badge: 'Co-Associé',
+    photo: '/team/associe-4.jpg',
   },
 ]
 
@@ -46,7 +49,7 @@ export default function Equipe() {
           <div className="equipe-intro">
             <div className="section-label">Équipe de démarrage</div>
             <h2 className="section-title">Ceux qui ont dit oui<br />dès le premier jour.</h2>
-            <p>Avant les investisseurs, avant les premiers clients, avant la notoriété — il y avait une équipe. Ces quatre personnes ont choisi NovafriQ quand c'était encore une idée sur papier. Leurs rôles évolueront avec le groupe ; leurs noms resteront associés à son origine.</p>
+            <p>Avant les investisseurs, avant les premiers clients, avant la notoriété, il y avait une équipe. Ces quatre personnes ont choisi NovafriQ quand c'était encore une idée sur papier. Leurs rôles évolueront avec le groupe ; leurs noms resteront associés à son origine.</p>
           </div>
 
           <div className="equipe-grid">
